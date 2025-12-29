@@ -78,6 +78,35 @@
                                 </div>
                             </div>
                             
+                            </div>
+                            
+                            <!-- Dark Theme Color Customization -->
+                            <div class="col-12 mt-4">
+                                <h5 class="mb-3">Dark Theme Colors</h5>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Background Color</label>
+                                <div class="input-group colorpickerinput">
+                                    <input type="text" name="dark_theme_bg" class="form-control" value="{{ settings('dark_theme_bg', '#1a1a1a') }}">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-fill-drip" style="color: {{ settings('dark_theme_bg', '#1a1a1a') }}"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Accent Color</label>
+                                <div class="input-group colorpickerinput">
+                                    <input type="text" name="dark_theme_accent" class="form-control" value="{{ settings('dark_theme_accent', '#4f46e5') }}">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-fill-drip" style="color: {{ settings('dark_theme_accent', '#4f46e5') }}"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="form-group col-6">
                                 <label for="language">{!! __('admin.default_language', ['default' => 'Default Language']) !!}</label>
                                 <select class="form-control select2 select2-hidden-accessible" name="language"
