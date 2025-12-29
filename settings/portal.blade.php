@@ -45,8 +45,46 @@
                       </div>
                   </div>
                 </div>
+                </div>
+                
+                <!-- Theme Color Customization -->
+                <div class="card-header">
+                    <h4>Theme Color Customization</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Dark Mode Background</label>
+                            <div class="input-group">
+                                <input type="text" name="dark_theme_bg" class="form-control" value="{{ settings('dark_theme_bg', '#1a1a1a') }}">
+                                <div class="input-group-append">
+                                    <div class="input-group-text" style="background-color: {{ settings('dark_theme_bg', '#1a1a1a') }}; width: 40px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="form-text text-muted">
+                                Enter a hex color code (e.g., #1a1a1a)
+                            </small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Accent Color</label>
+                            <div class="input-group">
+                                <input type="text" name="dark_theme_accent" class="form-control" value="{{ settings('dark_theme_accent', '#4f46e5') }}">
+                                <div class="input-group-append">
+                                    <div class="input-group-text" style="background-color: {{ settings('dark_theme_accent', '#4f46e5') }}; width: 40px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="form-text text-muted">
+                                Enter a hex color code (e.g., #4f46e5)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="card-footer text-right">
-                  <button type="submit" class="btn btn-primary">{!! __('admin.submit') !!}</button>
+                    <button type="button" class="btn btn-secondary" onclick="previewTheme()">Preview</button>
+                    <button type="submit" class="btn btn-primary">{!! __('admin.submit') !!}</button>
                 </div>
               </div>
             </form>
